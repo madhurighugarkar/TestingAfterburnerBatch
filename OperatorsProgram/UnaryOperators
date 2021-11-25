@@ -1,0 +1,19 @@
+package operatorsProgram;
+
+public class UnaryOperators {
+
+	public static void main(String[] args) {
+	
+		int a = 11;  // initialize variables
+		int b = 5;
+		
+		System.out.println("Unary Minus Operator:" +(-a));
+		
+		System.out.println("pre increment:"  +(++a));  // increment operator
+		System.out.println("post increment:"  +(a++));
+		
+		System.out.println("pre decrement:"  +(--b));   // decrement operator
+		System.out.println("post decrement:"  +(b--));
+	}
+
+}
