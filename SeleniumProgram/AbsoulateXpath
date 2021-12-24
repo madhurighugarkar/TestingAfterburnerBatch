@@ -1,0 +1,49 @@
+package seleniumProgram;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AbsoulateXpath {
+
+	static WebDriver driver;
+
+	public static void launchBrowser() {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+
+	public static void openApplicationUrl(String url) {
+		driver.get(url);
+
+	}
+
+	public static void sendKeys(WebElement ele, String value) {
+		ele.sendKeys(value);
+	}
+
+	public static void clearText(WebElement ele) {
+		ele.sendKeys();
+	}
+
+	public static void getLbl() {
+
+		String passwordLbl = driver.findElement(By.xpath("/html/body/label")).getText();
+		System.out.println(passwordLbl);
+
+		String username = driver.findElement(By.tagName("/html/body/div[1]/label")).getTagName();
+		System.out.println(username);
+	}
+
+	public static void main(String[] args) {
+		launchBrowser();
+		openApplicationUrl("file:///E:/WebDrivers/html/loginpage.html");
+	
+		getLbl();
+		
+		
+	}
+
+}
